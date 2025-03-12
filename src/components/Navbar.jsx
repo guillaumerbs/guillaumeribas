@@ -1,5 +1,10 @@
+import { useEffect } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({menuOpen, setMenuOpen}) => {
+
+    useEffect(() => {
+        document.body.style.overflow = menuOpen ? "hidden" : "";
+    }, [menuOpen]);
 
     return ( 
         <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
@@ -7,8 +12,28 @@ export const Navbar = () => {
                 <div className="flex justify-between items-center h-16"> 
                     <a href="#home" className="font-mono text-xl font-bold text-white">
                         {" "}
-                        G<span className="text-blue-500">Ribas</span>{" "}
+                        guillaume<span className="text-blue-500">ribas</span>{" "}
                     </a>
+
+                    <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
+                    onClick={() => setMenuOpen((prev) => !prev)}>
+                        &#9776;
+                    </div>
+
+                    <div className="hidden md:flex items-center space-x-8">
+                        <a href="#home" className="text-gray-300 hover:text-blue-500 font-bold transition-colors">
+                            Accueil
+                        </a>
+                        <a href="#about" className="text-gray-300 hover:text-blue-500 font-bold transition-colors">
+                            A propos
+                        </a>
+                        <a href="#projects" className="text-gray-300 hover:text-blue-500 font-bold transition-colors">
+                            Projets
+                        </a>
+                        <a href="#contact" className="text-gray-300 hover:text-blue-500 font-bold transition-colors">
+                            Contact
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>

@@ -6,7 +6,7 @@ import { Navbar } from './components/Navbar';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
-
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
@@ -16,7 +16,7 @@ function App() {
             isLoaded ? "opacity-100" : "opacity-0"
           } bg-black text-gray-100`}
         >
-          <Navbar />
+          <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
     </>
   );
