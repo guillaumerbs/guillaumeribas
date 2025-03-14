@@ -34,7 +34,7 @@ export const Home = () => {
                         <FaLinkedin />
                         <span className="sr-only">LinkedIn</span>
                     </a>
-                    <a href="/cv.webp" download className="text-gray-300 text-4xl hover:text-red-600" aria-label="Télécharger mon CV">
+                    <a href="/cv.pdf" download className="text-gray-300 text-4xl hover:text-red-600" aria-label="Télécharger mon CV">
                         <FaFileDownload />
                         <span className="sr-only">Télécharger CV</span>
                     </a>
