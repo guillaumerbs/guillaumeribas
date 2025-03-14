@@ -40,11 +40,6 @@ export const About = () => {
                 </h2>
 
                 <div className="rounded-xl p-4 border-white/10 border hover:-translate-y-1 transition-all">
-                    <div className="block md:hidden flex justify-center p-4 hover:-translate-y-1 transition-all mb-4">
-                        <div className="w-36 h-46 rounded-md overflow-hidden border-3 border-blue-500/20">
-                            <img src="/profil.webp" alt="Guillaume Ribas" className="w-full h-full object-cover" width="144" height="184" loading="lazy" />
-                        </div>
-                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="flex flex-col gap-6">
@@ -82,7 +77,7 @@ export const About = () => {
                                 </div>
                             </div>
                             
-                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                            <div className="rounded-xl p-4 hover:-translate-y-1 transition-all">
                                 <h3 className="text-xl font-bold mb-4 text-center md:text-left">Backend</h3>
                                 <ul className="flex flex-wrap gap-2 justify-center md:justify-start list-none p-0 m-0">
                                     {backendSkills.map((tech, key) => (
@@ -104,36 +99,26 @@ export const About = () => {
                             <IoSchoolSharp className="inline-block mr-2" aria-hidden="true" />
                             <span>Formation</span>
                         </h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 text-center md:text-left">
-                            <li className="mb-2">
-                                <strong>Titre Professionnel Développeur Web et Web Mobile</strong> - École O'Clock
-                                (2023-2024)
-                            </li>
-                            <li>
-                                Spécialisation <strong>Full Stack</strong> PHP/Symfony.
-                            </li>
-                            <li>
-                                <strong>Projet de fin de formation</strong> : De la conception à la mise en ligne d'un site de réservation de voyage.
-                            </li>
-                        </ul>
+                        <div className="text-gray-300 text-center md:text-left">
+                            <h4 className="font-semibold mb-2">Titre Professionnel Développeur Web et Web Mobile</h4>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>Spécialisation <strong>Full Stack</strong> PHP/Symfony.</li>
+                                <li><strong>Projet de fin de formation</strong> : De la conception à la mise en ligne d'un site de réservation de voyage.</li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4 flex items-center justify-center md:justify-start">
                             <MdWork className="inline-block mr-2" aria-hidden="true" />
                             <span>Expérience</span>
                         </h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 text-center md:text-left">
-                            <li className="mb-2">
-                                <strong>Développeur Mobile/Web</strong> - Yuli<br/>
-                                (2024-2025)
-                            </li>
-                            <li>
-                                Conception et développement d'une application mobile de suivi animalier.
-                            </li>
-                            <li>
-                                Refonte du site web afin d'en améliorer l'expérience utilisateur.
-                            </li>
-                        </ul>
+                        <div className="text-gray-300 text-center md:text-left">
+                            <h4 className="font-semibold mb-2">Développeur Mobile/Web - Yuli</h4>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>Conception et développement d'une application mobile de suivi animalier.</li>
+                                <li>Refonte du site web afin d'en améliorer l'expérience utilisateur.</li>
+                            </ul>
+                        </div>
                     </div>            
                 </div>
             </div>
