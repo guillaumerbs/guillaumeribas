@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { RevealOnScroll } from '../RevealOnScroll';
 import emailjs from 'emailjs-com';
 
 export const Contact = () => {
@@ -13,10 +14,6 @@ export const Contact = () => {
         email: "",
         message: ""
     });
-
-    const SERVICE_ID = 'service_vmqye54';
-    const TEMPLATE_ID = 'template_isiynr3';
-    const PUBLIC_KEY = 'qTQZNhaxOmPl1dKQ-';
 
     const validateForm = () => {
         let isValid = true;
@@ -51,7 +48,7 @@ export const Contact = () => {
         }
 
         emailjs
-            .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+            .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
             .then(() => {
                 alert('Message envoyé avec succès !');
                 setFormData({
@@ -67,8 +64,9 @@ export const Contact = () => {
 
     return (
         <section id="contact" className="min-h-screen flex flex-items-center justify-center py-20">
+            <RevealOnScroll>
             <div className="px-4 w-150">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent text-center">Me Contacter</h2>
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-blue-300 bg-clip-text text-transparent text-center">Me Contacter</h2>
                 <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="relative">
                         <input
@@ -120,6 +118,7 @@ export const Contact = () => {
                     </button>
                 </form>
             </div>
+            </RevealOnScroll>
         </section>
     );
 };
