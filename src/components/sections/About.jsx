@@ -1,3 +1,4 @@
+import { RevealOnScroll } from "../RevealOnScroll";
 import { IoSchoolSharp } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
 
@@ -34,8 +35,9 @@ export const About = () => {
         id="about" 
         aria-label="À propos de moi"
         className="min-h-screen flex items-center justify-center py-20">
+            <RevealOnScroll>
             <div className="max-w-3xl mx-auto px-3">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent text-center"> 
+                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-blue-300 bg-clip-text text-transparent text-center"> 
                 À propos
                 </h2>
 
@@ -122,6 +124,7 @@ export const About = () => {
                     </div>            
                 </div>
             </div>
+            </RevealOnScroll>
         </section>
     );
 };

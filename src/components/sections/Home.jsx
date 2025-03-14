@@ -1,3 +1,4 @@
+import { RevealOnScroll } from "../RevealOnScroll";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 
 export const Home = () => {
@@ -7,8 +8,9 @@ export const Home = () => {
             aria-label="Accueil"
             className="min-h-screen flex items-center justify-center relative"
         >
+            <RevealOnScroll>
             <div className="text-center z-10 px-4">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-right">
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-blue-300 bg-clip-text text-transparent leading-right">
                     Hello, Je suis Guillaume Ribas
                 </h1>
                 <p className="text-gray text-lg mb-8 max-w-lg mx-auto">
@@ -40,6 +42,7 @@ export const Home = () => {
                     </a>
                 </div>
             </div>
+            </RevealOnScroll>
         </section>
     );
 };
