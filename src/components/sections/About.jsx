@@ -1,6 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { IoSchoolSharp } from "react-icons/io5";
 import { MdWork } from "react-icons/md";
+import profileImage from "../../../public/profil.webp";
 
 export const About = () => {
     const softSkills = [
@@ -41,7 +42,7 @@ export const About = () => {
                 À propos
                 </h2>
 
-                <div className="rounded-xl p-4 border-white/10 border hover:-translate-y-1 transition-all">
+                <div className="rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <div className="flex flex-col gap-6">
@@ -75,7 +76,7 @@ export const About = () => {
                         <div className="flex flex-col">
                             <div className="hidden md:flex justify-center p-4 hover:-translate-y-1 transition-all">
                                 <div className="w-36 h-46 rounded-md overflow-hidden border-3 border-blue-500/20">
-                                    <img src="/profil.webp" alt="Guillaume Ribas" className="w-full h-full object-cover" width="144" height="184" loading="lazy" />
+                                    <img src={profileImage} alt="Guillaume Ribas" className="w-full h-full object-cover" width="144" height="184" loading="lazy" />
                                 </div>
                             </div>
                             
@@ -96,7 +97,7 @@ export const About = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
                         <h3 className="text-xl font-bold mb-4 flex items-center justify-center md:justify-start">
                             <IoSchoolSharp className="inline-block mr-2" aria-hidden="true" />
                             <span>Formation</span>
@@ -109,7 +110,7 @@ export const About = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                    <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
                         <h3 className="text-xl font-bold mb-4 flex items-center justify-center md:justify-start">
                             <MdWork className="inline-block mr-2" aria-hidden="true" />
                             <span>Expérience</span>
