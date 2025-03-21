@@ -5,7 +5,7 @@ export const Projects = () => {
     const projectsData = [
         {
             title: "Guyane Pêche Sportive",
-            description: "Je travaille actuellement sur la refonte du site web de Guyane Pêche Sportive, afin de lui offrir une interface plus moderne. Le site propose une présentation des différentes activités du guide, un blog pour partager des actualités, ainsi qu'un système de réservation en ligne pour les sorties.",
+            description: "Je travaille actuellement sur la refonte du site web de Guyane Pêche Sportive, afin de lui offrir une interface plus moderne. Le site proposera une présentation des différentes activités du guide, un blog pour partager des actualités, ainsi qu'un système de réservation en ligne pour les sorties.",
             technologies: ["PHP", "Symfony", "Twig", "JavaScript", "TailwindCSS"],
             projectLink: "#",
             demoLink: "#",
@@ -16,7 +16,7 @@ export const Projects = () => {
             description: "Il s'agit d'un site web pour une microbrasserie. Ce projet me permet de mettre en avant mes compétences en développement frontend. Le site propose entre autre une présentation des différentes bières, pour une expérience utilisateur fluide et engageante.",
             technologies: ["React", "TypeScript", "TailwindCSS"],
             projectLink: "https://github.com/guillaumerbs/lesbieresduhibou",
-            demoLink: "#https://guillaumerbs.github.io/lesbieresduhibou/",
+            demoLink: "https://guillaumerbs.github.io/lesbieresduhibou/",
             demoLinkText: "Voir Site"
         },
         {
@@ -79,7 +79,7 @@ export const Projects = () => {
                                         Voir Projet &#8594;
                                     </a>
                                     {project.demoLink ? (
-                                        <a href={project.demoLink} target="_blank" className="text-blue-400 hover:text-blue-300 transition colors m-2">
+                                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition colors m-2">
                                             {project.demoLinkText} &#8594;
                                         </a>
                                     ) : (
