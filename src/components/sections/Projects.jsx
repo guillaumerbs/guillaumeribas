@@ -13,11 +13,11 @@ export const Projects = () => {
         },
         {
             title: "Les Bières du Hibou",
-            description: "Il s'agit d'un site web pour une microbrasserie. Ce projet me permet de mettre en avant mes compétences en développement frontend. Le site propose une présentation des différentes bières, l'histoire de la brasserie, ainsi qu'un système de commande en ligne pour une expérience utilisateur fluide et engageante.",
-            technologies: ["React", "Node.js", "TailwindCSS"],
-            projectLink: "#",
-            demoLink: "#",
-            demoLinkText: "Voir Démo"
+            description: "Il s'agit d'un site web pour une microbrasserie. Ce projet me permet de mettre en avant mes compétences en développement frontend. Le site propose entre autre une présentation des différentes bières, pour une expérience utilisateur fluide et engageante.",
+            technologies: ["React", "TypeScript", "TailwindCSS"],
+            projectLink: "https://github.com/guillaumerbs/lesbieresduhibou",
+            demoLink: "#https://guillaumerbs.github.io/lesbieresduhibou/",
+            demoLinkText: "Voir Site"
         },
         {
             title: "O'Galaxy",
