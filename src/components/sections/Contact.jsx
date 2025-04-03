@@ -15,6 +15,8 @@ export const Contact = () => {
         message: ""
     });
 
+    const [isLoading, setIsLoading] = useState(false);
+
     const validateForm = () => {
         let isValid = true;
         let errors = {};
@@ -47,6 +49,7 @@ export const Contact = () => {
             return;
         }
 
+        setIsLoading(true);
         emailjs
             .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY)
             .then(() => {
@@ -59,6 +62,9 @@ export const Contact = () => {
             })
             .catch(() => {
                 alert('Une erreur est survenue, veuillez réessayer plus tard.');
+            })
+            .finally(() => {
+                setIsLoading(false);
             });
     };
 
@@ -115,9 +121,17 @@ export const Contact = () => {
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-700 text-white py-3 px-4 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+                        className="w-full bg-blue-700 text-white py-3 px-4 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex justify-center items-center"
+                        disabled={isLoading}
                     >
-                        Envoyer Message
+                        {isLoading ? (
+                            <svg className="animate-spin h-5 w-5 mr-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v2.5A5.5 5.5 0 004.5 12H4z"></path>
+                            </svg>
+                        ) : (
+                            "Envoyer Message"
+                        )}
                     </button>
                 </form>
             </div>
