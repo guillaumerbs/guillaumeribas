@@ -1,0 +1,6 @@
+# robots.txt pour guillaumeribas.com
+User-agent: *
+Allow: /
+
+# Plan du site
+Sitemap: https://votresite.com/sitemap.xml
