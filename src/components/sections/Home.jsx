@@ -1,6 +1,17 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 
+const downloadCV = async () => {
+    const response = await fetch("https://guillaumerbs.github.io/guillaumeribas/cv.pdf");
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "Guillaume_Ribas_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
 export const Home = () => {
     return (
         <section 
@@ -36,7 +47,8 @@ export const Home = () => {
                         <FaLinkedin />
                         <span className="sr-only">LinkedIn</span>
                     </a>
-                    <a href="/cv.pdf" download="cv.pdf" className="text-gray-300 text-4xl hover:text-red-600" aria-label="Télécharger mon CV">
+                    <a onClick={downloadCV} className="cursor-pointer text-gray-300 text-4xl hover:text-red-600" 
+                    aria-label="Télécharger mon CV">
                         <FaFileDownload />
                         <span className="sr-only">Télécharger CV</span>
                     </a>
