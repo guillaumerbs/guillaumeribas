@@ -25,7 +25,7 @@ export const Home = () => {
                     Hello, Je suis Guillaume Ribas
                 </h1>
                 <p className="text-gray text-lg mb-8 max-w-lg mx-auto">
-                    Développeur Full Stack, je conçois des applications performantes et intuitives. Toujours en quête d'optimisation et d'innovation, j'accorde une attention particulière à l'expérience utilisateur et aux bonnes pratiques de développement.
+                    Développeur Full Stack basé entre Toulouse et Montauban, je conçois des applications performantes et intuitives. Toujours en quête d'optimisation et d'innovation, j'accorde une attention particulière à l'expérience utilisateur et aux bonnes pratiques de développement.
                 </p>
                 <div className="flex justify-center space-x-4 mb-8">
                     <a  href="#projects" className="bg-blue-700 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]" 
@@ -47,7 +47,9 @@ export const Home = () => {
                         <FaLinkedin />
                         <span className="sr-only">LinkedIn</span>
                     </a>
-                    <a onClick={downloadCV} className="cursor-pointer text-gray-300 text-4xl hover:text-red-600" 
+                    <a onClick={downloadCV} 
+                    role="button"
+                    className="cursor-pointer text-gray-300 text-4xl hover:text-red-600" 
                     aria-label="Télécharger mon CV">
                         <FaFileDownload />
                         <span className="sr-only">Télécharger CV</span>
