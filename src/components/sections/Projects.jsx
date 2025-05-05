@@ -5,10 +5,10 @@ export const Projects = () => {
     const projectsData = [
         {
             title: "Guyane Pêche Sportive",
-            description: "Je travaille actuellement sur la refonte du site web de Guyane Pêche Sportive, afin de lui offrir une interface plus moderne. Le site proposera une présentation des différentes activités du guide, un blog pour partager des actualités, ainsi qu'un système de réservation en ligne pour les sorties.",
-            technologies: ["PHP", "Symfony", "Twig", "JavaScript", "TailwindCSS"],
-            projectLink: "#",
-            demoLink: "#",
+            description: "Je travaille actuellement sur la refonte du site web de Guyane Pêche Sportive, afin de lui offrir une interface plus moderne. Le site proposera une présentation des différentes activités du guide, un blog pour partager des actualités, ainsi qu'un formulaire de réservation en ligne pour les sorties.",
+            technologies: ["React", "TypeScript", "TailwindCSS"],
+            projectLink: "https://github.com/guillaumerbs/guyanepechesportive",
+            demoLink: "https://guyanepechesportive.vercel.app/",
             demoLinkText: "Voir Site"
         },
         {
